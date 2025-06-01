@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臉盲訓練器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>臉盲訓練器</h1>
+        <div id="game-area">
+            <p id="question"></p>
+            <div class="image-options">
+                <img id="image1" src="" alt="選項1" class="face-image">
+                <img id="image2" src="" alt="選項2" class="face-image">
+            </div>
+            <div id="feedback" class="feedback"></div>
+            <button id="next-button">下一題</button>
+        </div>
+        <div id="result-area" class="hidden">
+            <h2>挑戰結束！</h2>
+            <p>你的分數：<span id="score">0</span> / <span id="total-questions">0</span></p>
+            <button id="restart-button">重新開始</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -93,6 +93,8 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 20px;
+    margin-left: 5px; /* 給按鈕之間一點間距 */
+    margin-right: 5px; /* 給按鈕之間一點間距 */
 }
 
 button:hover {
@@ -121,7 +123,105 @@ button:disabled {
     color: #34495e;
 }
 
-#score {
+#score, #time-taken {
     color: #007bff;
     font-weight: bold;
+}
+
+/* 新增的樣式 */
+.score-submission {
+    margin: 30px 0;
+    padding: 15px;
+    border: 1px solid #e0e6eb;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap; /* 允許換行在小螢幕上 */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 元素間距 */
+}
+
+.score-submission label {
+    font-size: 1.1em;
+    color: #34495e;
+    white-space: nowrap; /* 避免換行 */
+}
+
+.score-submission input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 180px; /* 輸入框寬度 */
+    max-width: 100%; /* 確保響應式 */
+}
+
+.score-submission button {
+    margin: 0; /* 重置按鈕的 margin */
+}
+
+.leaderboard-section {
+    margin-top: 40px;
+    border-top: 2px solid #e0e6eb;
+    padding-top: 20px;
+}
+
+.leaderboard-section h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#leaderboard-list {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 300px; /* 限制高度，可滾動 */
+    overflow-y: auto; /* 超出高度時顯示滾動條 */
+    text-align: left; /* 排行榜內容左對齊 */
+}
+
+#leaderboard-list ul {
+    list-style: none; /* 移除列表點 */
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboard-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #d0d7e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    color: #495057;
+}
+
+#leaderboard-list li:last-child {
+    border-bottom: none; /* 最後一項沒有底線 */
+}
+
+#leaderboard-list li .rank {
+    font-weight: bold;
+    color: #007bff;
+    width: 30px; /* 排名寬度 */
+    text-align: center;
+}
+
+#leaderboard-list li .name {
+    flex-grow: 1; /* 姓名佔據剩餘空間 */
+    font-weight: 600;
+}
+
+#leaderboard-list li .score,
+#leaderboard-list li .time {
+    font-weight: bold;
+    color: #28a745;
+    width: 60px; /* 分數和時間的寬度 */
+    text-align: right;
+}
+
+#leaderboard-list li .time {
+    color: #ffc107; /* 時間顏色 */
 }
